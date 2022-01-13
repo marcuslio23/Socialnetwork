@@ -40,7 +40,7 @@ public class EventDbRepository implements Repository<Long, Event> {
                 long id = resultSet.getLong("id");
                 String title = resultSet.getString("title");
                 String description = resultSet.getString("description");
-                String date = resultSet.getString("sent_date");
+                String date = resultSet.getString("date");
 
                 List<Long> userList = new ArrayList<>();
                 try (Connection connection1 = DriverManager.getConnection(url, username, password);
