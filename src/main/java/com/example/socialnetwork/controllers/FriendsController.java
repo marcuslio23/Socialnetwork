@@ -163,7 +163,6 @@ public class FriendsController {
     public void onRefreshIconPress() {
         data.clear();
         data.addAll(this.globalService.userFriendsList(user.getFirstName(), user.getLastName()));
-//        tableView.setItems(data);
     }
 
     public void onDeleteImgPress(MouseEvent mouseEvent) {
