@@ -3,13 +3,16 @@ package com.example.socialnetwork.repository.db;
 
 import com.example.socialnetwork.domain.User;
 import com.example.socialnetwork.domain.validators.Validator;
-import com.example.socialnetwork.repository.Repository;
+import com.example.socialnetwork.repository.paging.Page;
+import com.example.socialnetwork.repository.paging.Pageable;
+import com.example.socialnetwork.repository.paging.PagingRepository;
+import javafx.scene.control.Pagination;
 
 import java.sql.*;
 import java.util.HashSet;
 import java.util.Set;
 
-public class UserDbRepository implements Repository<Long, User> {
+public class UserDbRepository implements PagingRepository<Long, User> {
     private final String url;
     private final String username;
     private final String password;
@@ -118,4 +121,9 @@ public class UserDbRepository implements Repository<Long, User> {
 
     }
 
+    @Override
+    public Page<User> findAll(Pageable pageable) {
+        Pagination pagination = new Pagination(1, 2);
+        return null;
+    }
 }
