@@ -98,7 +98,6 @@ public class AccountDbRepository implements PagingRepository<Long, Account> {
 
     @Override
     public void update(Account account) {
-//        validator.validate(account);
     }
 
     @Override

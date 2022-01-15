@@ -17,7 +17,7 @@ public class EventDbRepository implements PagingRepository<Long, Event> {
     private final String username;
     private final String password;
     private final String url;
-    private Validator<Event> validator;
+    private final Validator<Event> validator;
 
     public EventDbRepository(String url, String username, String password, Validator<Event> eventValidator) {
         this.username = username;
@@ -25,23 +25,6 @@ public class EventDbRepository implements PagingRepository<Long, Event> {
         this.url = url;
         this.validator = eventValidator;
     }
-
-//    private Event buildEvent(Long eventId, String sql, long id, String title, String description, String date) {
-//        List<Long> userList = new ArrayList<>();
-//        try (Connection connection1 = DriverManager.getConnection(url, username, password);
-//             PreparedStatement preparedStatement1 = connection1.prepareStatement(sql)) {
-//            preparedStatement1.setLong(1, eventId);
-//            ResultSet resultSet1 = preparedStatement1.executeQuery();
-//            var userId = resultSet1.getLong("id_user");
-//            userList.add(userId);
-//        } catch (SQLException exception) {
-//            exception.printStackTrace();
-//        }
-//
-//        Event event = new Event(title, description, LocalDateTime.parse(date, DateTimeFormatter.ISO_DATE_TIME), userList);
-//        event.setId(id);
-//        return event;
-//    }
 
     @Override
     public Event findOne(Long eventId) {

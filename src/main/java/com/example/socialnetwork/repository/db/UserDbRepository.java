@@ -6,8 +6,8 @@ import com.example.socialnetwork.domain.validators.Validator;
 import com.example.socialnetwork.repository.paging.Page;
 import com.example.socialnetwork.repository.paging.Pageable;
 import com.example.socialnetwork.repository.paging.PagingRepository;
-import javafx.scene.control.Pagination;
 
+import javafx.scene.control.Pagination;
 import java.sql.*;
 import java.util.HashSet;
 import java.util.Set;
